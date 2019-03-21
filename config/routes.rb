@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   devise_for :users
   
   get("/users/:id_to_display", { :controller => "users", :action => "show" })
-
+  get("/my_likes", { :controller => "likes", :action => "my_likes" })
+  get("/", { :controller => "photos", :action => "index" })
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

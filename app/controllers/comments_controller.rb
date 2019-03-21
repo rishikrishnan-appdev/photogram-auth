@@ -26,8 +26,8 @@ class CommentsController < ApplicationController
 
     if @comment.valid?
       @comment.save
-
-      redirect_back(:fallback_location => "/comments", :notice => "Comment created successfully.")
+      @photos = Photo.all
+      redirect_back(:fallback_location => "/photos", :notice => "Comment created successfully.")
     else
       render("comment_templates/new_form_with_errors.html.erb")
     end

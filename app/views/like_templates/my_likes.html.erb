@@ -1,0 +1,13 @@
+<div class="col-md-8 offset-md-2">
+  <% @likes.each do |like| %>
+  <div class="card">
+    <div class="card-header">
+      <%= like.photo.user.username %>
+    </div>
+    <div class="card-body">
+      <img src="<%= like.photo.image %>" class="img-fluid">
+      <%= like.photo.caption %>
+    </div>
+  </div>
+  <% end %>
+</div>
